@@ -51,7 +51,11 @@ class Argument
     public static function i()
     {
         $class = __CLASS__;
-        return new $class($message, $code);
+        /**
+        * @see https://github.com/Eden-PHP/Mail/issues/30
+        * return new $class($message, $code);
+        */
+        return new $class();
     }
     
     /**
